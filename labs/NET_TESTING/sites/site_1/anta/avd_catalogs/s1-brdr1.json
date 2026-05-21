@@ -45,12 +45,12 @@
           {
             "port": "Ethernet2",
             "neighbor_device": "s1-spine1.atd.lab",
-            "neighbor_port": "Ethernet6"
+            "neighbor_port": "Ethernet7"
           },
           {
             "port": "Ethernet3",
             "neighbor_device": "s1-spine2.atd.lab",
-            "neighbor_port": "Ethernet6"
+            "neighbor_port": "Ethernet7"
           },
           {
             "port": "Ethernet6",
@@ -293,6 +293,10 @@
           },
           {
             "name": "Vlan20",
+            "status": "up"
+          },
+          {
+            "name": "Vlan30",
             "status": "up"
           },
           {

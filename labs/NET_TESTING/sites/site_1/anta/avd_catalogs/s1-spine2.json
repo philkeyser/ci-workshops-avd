@@ -58,7 +58,7 @@
             "neighbor_port": "Ethernet3"
           },
           {
-            "port": "Ethernet6",
+            "port": "Ethernet7",
             "neighbor_device": "s1-brdr1.atd.lab",
             "neighbor_port": "Ethernet3"
           },
@@ -318,7 +318,7 @@
             "status": "up"
           },
           {
-            "name": "Ethernet6",
+            "name": "Ethernet7",
             "status": "up"
           },
           {
