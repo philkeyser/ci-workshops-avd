@@ -1,6 +1,16 @@
 Device,Test Name,Test Status,Message(s),Test description,Test category
 s1-brdr1,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
-s1-brdr1,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
+s1-brdr1,VerifyRunningConfigDiffs,failure,"--- flash:/startup-config
++++ system:/running-config
+@@ -76,6 +76,7 @@
+    ip address 172.16.1.17/31
+ !
+ interface Ethernet3
++   shutdown
+ !
+ interface Ethernet4
+    description P2P_s2-brdr1_Ethernet4
+",Verifies there is no difference between the running-config and the startup-config.,Configuration
 s1-brdr1,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
 s1-brdr1,VerifyLLDPNeighbors,success,,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
 s1-brdr1,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity

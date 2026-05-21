@@ -263,7 +263,6 @@ vlan internal order ascending range 1006 1199
 | Ethernet3 | P2P_s1-leaf2_Ethernet3 | - | 172.16.1.6/31 | default | 1500 | False | - | - |
 | Ethernet4 | P2P_s1-leaf3_Ethernet3 | - | 172.16.1.10/31 | default | 1500 | False | - | - |
 | Ethernet5 | P2P_s1-leaf4_Ethernet3 | - | 172.16.1.14/31 | default | 1500 | False | - | - |
-| Ethernet7 | P2P_s1-brdr1_Ethernet3 | - | 172.16.1.18/31 | default | 1500 | False | - | - |
 | Ethernet8 | P2P_s1-brdr2_Ethernet3 | - | 172.16.1.22/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
@@ -297,13 +296,6 @@ interface Ethernet5
    mtu 1500
    no switchport
    ip address 172.16.1.14/31
-!
-interface Ethernet7
-   description P2P_s1-brdr1_Ethernet3
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 172.16.1.18/31
 !
 interface Ethernet8
    description P2P_s1-brdr2_Ethernet3
@@ -440,7 +432,6 @@ ASN Notation: asplain
 | 172.16.1.7 | 65101 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
 | 172.16.1.11 | 65102 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
 | 172.16.1.15 | 65102 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 172.16.1.19 | 65103 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
 | 172.16.1.23 | 65103 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
 
 #### Router BGP EVPN Address Family
@@ -501,9 +492,6 @@ router bgp 65100
    neighbor 172.16.1.15 peer group IPv4-UNDERLAY-PEERS
    neighbor 172.16.1.15 remote-as 65102
    neighbor 172.16.1.15 description s1-leaf4_Ethernet3
-   neighbor 172.16.1.19 peer group IPv4-UNDERLAY-PEERS
-   neighbor 172.16.1.19 remote-as 65103
-   neighbor 172.16.1.19 description s1-brdr1_Ethernet3
    neighbor 172.16.1.23 peer group IPv4-UNDERLAY-PEERS
    neighbor 172.16.1.23 remote-as 65103
    neighbor 172.16.1.23 description s1-brdr2_Ethernet3

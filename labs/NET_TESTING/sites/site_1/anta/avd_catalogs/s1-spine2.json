@@ -58,11 +58,6 @@
             "neighbor_port": "Ethernet3"
           },
           {
-            "port": "Ethernet7",
-            "neighbor_device": "s1-brdr1.atd.lab",
-            "neighbor_port": "Ethernet3"
-          },
-          {
             "port": "Ethernet8",
             "neighbor_device": "s1-brdr2.atd.lab",
             "neighbor_port": "Ethernet3"
@@ -103,12 +98,6 @@
           {
             "destination": "172.16.1.15",
             "source": "172.16.1.14",
-            "vrf": "default",
-            "repeat": 1
-          },
-          {
-            "destination": "172.16.1.19",
-            "source": "172.16.1.18",
             "vrf": "default",
             "repeat": 1
           },
@@ -318,10 +307,6 @@
             "status": "up"
           },
           {
-            "name": "Ethernet7",
-            "status": "up"
-          },
-          {
             "name": "Ethernet8",
             "status": "up"
           },
@@ -395,10 +380,6 @@
           },
           {
             "peer_address": "172.16.1.15",
-            "vrf": "default"
-          },
-          {
-            "peer_address": "172.16.1.19",
             "vrf": "default"
           },
           {
